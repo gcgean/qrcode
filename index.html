@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0ea5a4" />
+  <title>QR Grátis — Gerador de QR Code Online Grátis (Link, WhatsApp, WI-FI, PIX e mais)</title>
+  <meta name="description" content="Gere QR Codes grátis e ilimitados para Link, Texto, E-mail, WhatsApp, WI-FI, V-card, PDF, Eventos e muito mais. Personalize moldura, forma e logo. Baixe em PNG gratuitamente." />
+  <meta name="keywords" content="qr code, gerador qr code, qr code grátis, qr code online, qr code whatsapp, qr code wi-fi, qr code pix, qr code vcard" />
+  <meta name="author" content="QR Grátis" />
+  <link rel="canonical" href="https://qrgratis.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="QR Grátis — Gerador de QR Code Online Grátis" />
+  <meta property="og:description" content="Gere QR Codes grátis para Link, WhatsApp, WI-FI, V-card, PDF, Eventos e muito mais. Personalize e baixe em PNG." />
+  <meta property="og:url" content="https://qrgratis.com.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QR Grátis — Gerador de QR Code Online Grátis" />
+  <meta name="twitter:description" content="Gere QR Codes grátis e personalizados em segundos." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "QR Grátis",
+    "description": "Gerador de QR Code online grátis e ilimitado.",
+    "url": "https://qrgratis.com.br/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-2969341599167186" />
+  <script id="adsense-script" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2969341599167186" crossorigin="anonymous" data-requires-consent="true"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Libs de geração -->
+  <script src="js/qrcode.min.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="QR Grátis - Início">
+        <span class="logo-mark" aria-hidden="true">QR</span>
+        <span class="logo-text">QR<span class="logo-accent">Grátis</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="index.html">Gerador</a>
+        <a href="pages/sobre.html">Sobre</a>
+        <a href="pages/contato.html">Contato</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Header banner AD -->
+  <section class="ad-slot ad-header container" aria-label="Publicidade">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2969341599167186"
+         data-ad-slot="1111111111"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </section>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Gerador de QR Code <span class="hero-accent">grátis</span> e ilimitado</h1>
+      <p class="hero-sub">Crie QR Codes para Link, WhatsApp, WI-FI, V-card, PDF e muito mais. Personalize moldura, forma e logo. 100% grátis, sem cadastro.</p>
+    </div>
+  </section>
+
+  <!-- Main generator -->
+  <main class="container main-layout">
+    <div class="generator-card" aria-label="Gerador de QR Code">
+
+      <!-- Tabs / tipos -->
+      <div class="type-grid" role="tablist" aria-label="Tipo de QR Code">
+        <button class="type-btn is-active" role="tab" data-type="link"><span class="icon">🔗</span>Link</button>
+        <button class="type-btn" role="tab" data-type="texto"><span class="icon">📝</span>Texto</button>
+        <button class="type-btn" role="tab" data-type="email"><span class="icon">✉️</span>E-mail</button>
+        <button class="type-btn" role="tab" data-type="chamada"><span class="icon">📞</span>Chamada</button>
+        <button class="type-btn" role="tab" data-type="sms"><span class="icon">💬</span>SMS</button>
+        <button class="type-btn" role="tab" data-type="vcard"><span class="icon">👤</span>V-card</button>
+        <button class="type-btn" role="tab" data-type="whatsapp"><span class="icon">🟢</span>WhatsApp</button>
+        <button class="type-btn" role="tab" data-type="wifi"><span class="icon">📶</span>WI-FI</button>
+        <button class="type-btn" role="tab" data-type="pdf"><span class="icon">📄</span>PDF</button>
+        <button class="type-btn" role="tab" data-type="app"><span class="icon">📱</span>App</button>
+        <button class="type-btn" role="tab" data-type="imagens"><span class="icon">🖼️</span>Imagens</button>
+        <button class="type-btn" role="tab" data-type="video"><span class="icon">▶️</span>Vídeo</button>
+        <button class="type-btn" role="tab" data-type="redes"><span class="icon">🌐</span>Redes Sociais</button>
+        <button class="type-btn" role="tab" data-type="evento"><span class="icon">📅</span>Evento</button>
+        <button class="type-btn" role="tab" data-type="codigo2d"><span class="icon">📊</span>Código 2D</button>
+      </div>
+
+      <!-- AD entre tipos e formulário -->
+      <div class="ad-slot ad-middle" aria-label="Publicidade">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2969341599167186"
+             data-ad-slot="2222222222"
+             data-ad-format="fluid"
+             data-ad-layout-key="-fb+5w+4e-db+86"
+             data-full-width-responsive="true"></ins>
+      </div>
+
+      <div class="gen-layout">
+
+        <!-- Form + customization (esquerda) -->
+        <section class="gen-form" aria-label="Configuração do QR Code">
+          <h2 class="section-title"><span class="step-num">1</span> Complete o conteúdo</h2>
+          <div id="formContainer" class="form-container"><!-- Renderizado por JS --></div>
+
+          <h2 class="section-title"><span class="step-num">2</span> Desenhe seu QR Code</h2>
+
+          <div class="custom-tabs" role="tablist" aria-label="Customização">
+            <button class="custom-tab is-active" data-tab="moldura">Moldura</button>
+            <button class="custom-tab" data-tab="forma">Forma</button>
+            <button class="custom-tab" data-tab="logo">Logo</button>
+          </div>
+
+          <!-- Moldura -->
+          <div class="custom-panel is-active" data-panel="moldura">
+            <div class="frame-list" id="frameList">
+              <!-- Renderizado por JS -->
+            </div>
+          </div>
+
+          <!-- AD entre Forma e Logo -->
+          <div class="ad-slot ad-between" aria-label="Publicidade">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2969341599167186"
+                 data-ad-slot="3333333333"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+          </div>
+
+          <!-- Forma -->
+          <div class="custom-panel" data-panel="forma">
+            <div class="form-row">
+              <label>Cor dos pontos
+                <input type="color" id="fgColor" value="#000000" />
+              </label>
+              <label>Cor de fundo
+                <input type="color" id="bgColor" value="#ffffff" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Estilo dos pontos
+                <select id="dotStyle">
+                  <option value="square">Quadrado (padrão)</option>
+                  <option value="rounded">Arredondado</option>
+                  <option value="dots">Pontos</option>
+                </select>
+              </label>
+              <label>Correção de erro
+                <select id="ecLevel">
+                  <option value="L">Baixa (L)</option>
+                  <option value="M" selected>Média (M)</option>
+                  <option value="Q">Alta (Q)</option>
+                  <option value="H">Máxima (H)</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div class="custom-panel" data-panel="logo">
+            <label class="upload-box">
+              <input type="file" id="logoInput" accept="image/*" hidden />
+              <span class="upload-icon">🖼️</span>
+              <span>Clique ou arraste um logo (PNG/JPG)</span>
+            </label>
+            <label class="inline-range">
+              Tamanho do logo
+              <input type="range" id="logoSize" min="10" max="35" value="22" />
+              <span id="logoSizeLabel">22%</span>
+            </label>
+            <button type="button" class="btn-ghost" id="removeLogo">Remover logo</button>
+          </div>
+
+        </section>
+
+        <!-- Preview (direita) -->
+        <aside class="gen-preview" aria-label="Pré-visualização do QR Code">
+          <h2 class="section-title"><span class="step-num">3</span> Baixar QR Code</h2>
+          <div class="qr-preview-box">
+            <div id="qrPreview" class="qr-preview" aria-live="polite">
+              <div class="qr-placeholder">Preencha o conteúdo para gerar</div>
+            </div>
+          </div>
+
+          <!-- AD resultado (aparece após gerar QR) -->
+          <div class="ad-slot ad-result" id="adResult" aria-label="Publicidade">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2969341599167186"
+                 data-ad-slot="9999999999"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+          </div>
+
+          <button id="generateBtn" class="btn-primary">Gerar QR Code</button>
+          <button id="downloadBtn" class="btn-secondary" disabled>Baixar PNG</button>
+          <button id="downloadSvgBtn" class="btn-ghost" disabled>Baixar SVG</button>
+
+          <!-- AD abaixo dos botões -->
+          <div class="ad-slot ad-below-action" aria-label="Publicidade">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2969341599167186"
+                 data-ad-slot="4444444444"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+          </div>
+        </aside>
+
+        <!-- AD sidebar sticky -->
+        <aside class="ad-slot ad-sidebar" aria-label="Publicidade">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-2969341599167186"
+               data-ad-slot="5555555555"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </aside>
+      </div>
+    </div>
+
+    <!-- AD entre gerador e features -->
+    <section class="ad-slot ad-inContent container" aria-label="Publicidade">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2969341599167186"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </section>
+
+    <!-- Features / SEO content block -->
+    <section class="features">
+      <h2 class="center-title">Por que usar o QR Grátis?</h2>
+      <div class="feature-grid">
+        <div class="feature"><span class="f-icon">🎨</span><h3>Personalização completa</h3><p>Molduras, cores, formas de pontos e logo no centro — tudo grátis.</p></div>
+        <div class="feature"><span class="f-icon">⚡</span><h3>Gerado em segundos</h3><p>Tudo acontece no seu navegador, sem cadastro e sem espera.</p></div>
+        <div class="feature"><span class="f-icon">📊</span><h3>15 tipos diferentes</h3><p>De link simples a V-card, WI-FI, evento de calendário e muito mais.</p></div>
+        <div class="feature"><span class="f-icon">🔒</span><h3>Privacidade</h3><p>Seus dados não saem do seu navegador. Nada é enviado para servidor.</p></div>
+      </div>
+    </section>
+
+    <!-- AD footer -->
+    <section class="ad-slot ad-footer" aria-label="Publicidade">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2969341599167186"
+           data-ad-slot="6666666666"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </section>
+
+    <!-- AD entre features e how-to -->
+    <section class="ad-slot ad-inContent container" aria-label="Publicidade">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2969341599167186"
+           data-ad-slot="0987654321"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </section>
+
+    <section class="how-to">
+      <h2>Como gerar um QR Code em 3 passos</h2>
+      <ol>
+        <li>Escolha o tipo de QR Code (Link, WhatsApp, WI-FI, etc.) no topo do gerador.</li>
+        <li>Preencha os campos com as informações que você quer compartilhar.</li>
+        <li>Clique em "Gerar QR Code", personalize do jeito que quiser e baixe em PNG ou SVG.</li>
+      </ol>
+      <p>Todos os QR Codes gerados aqui são <strong>grátis, ilimitados e sem marca d'água</strong>. Você pode usá-los em cartões de visita, cardápios, pôsteres, embalagens de produtos, eventos e muito mais.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>QR Grátis</strong>
+        <p>Gerador de QR Code online grátis.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="pages/sobre.html">Sobre</a>
+        <a href="pages/contato.html">Contato</a>
+        <a href="pages/politica-privacidade.html">Política de Privacidade</a>
+        <a href="pages/termos-uso.html">Termos de Uso</a>
+      </nav>
+      <p class="copy">© <span id="year"></span> QR Grátis. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile AD -->
+  <div class="ad-sticky-mobile" aria-label="Publicidade">
+    <button class="ad-sticky-close" id="adStickyClose" aria-label="Fechar anúncio">×</button>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2969341599167186"
+         data-ad-slot="7777777777"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+  </div>
+
+  <!-- Banner LGPD -->
+  <div id="lgpdBanner" class="lgpd-banner" hidden>
+    <p>Usamos cookies e tecnologias de terceiros (incluindo anúncios do Google) para melhorar sua experiência. Ao continuar, você concorda com nossa <a href="pages/politica-privacidade.html">Política de Privacidade</a>.</p>
+    <div>
+      <button id="lgpdAccept" class="btn-primary">Aceitar</button>
+      <button id="lgpdReject" class="btn-ghost">Recusar</button>
+    </div>
+  </div>
+
+  <!-- Modal Interstitial Ad (exibido ao clicar em Gerar QR Code) -->
+  <div id="adInterstitial" class="ad-interstitial-overlay" hidden role="dialog" aria-modal="true" aria-label="Publicidade">
+    <div class="ad-interstitial-box">
+      <div class="ad-interstitial-header">
+        <span class="ad-label">Publicidade</span>
+        <button id="skipAdBtn" class="ad-skip-btn" disabled>
+          Pular em <span id="skipCountdown">5</span>s
+        </button>
+      </div>
+      <div class="ad-interstitial-body">
+        <ins id="adInterstitialIns" class="adsbygoogle"
+             style="display:block;width:100%;min-height:250px"
+             data-ad-client="ca-pub-2969341599167186"
+             data-ad-slot="8888888888"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/ads-consent.js" defer></script>
+  <script src="js/generators/link.js" defer></script>
+  <script src="js/generators/texto.js" defer></script>
+  <script src="js/generators/email.js" defer></script>
+  <script src="js/generators/chamada.js" defer></script>
+  <script src="js/generators/sms.js" defer></script>
+  <script src="js/generators/vcard.js" defer></script>
+  <script src="js/generators/whatsapp.js" defer></script>
+  <script src="js/generators/wifi.js" defer></script>
+  <script src="js/generators/pdf.js" defer></script>
+  <script src="js/generators/app.js" defer></script>
+  <script src="js/generators/imagens.js" defer></script>
+  <script src="js/generators/video.js" defer></script>
+  <script src="js/generators/redes.js" defer></script>
+  <script src="js/generators/evento.js" defer></script>
+  <script src="js/generators/codigo2d.js" defer></script>
+  <script src="js/customization.js" defer></script>
+  <script src="js/qrcode-core.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
