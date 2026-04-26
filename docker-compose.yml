@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  qrcode:
+    build: .
+    container_name: qrcode_dev
+    ports:
+      - "8081:80"
+    restart: always
+    networks:
+      - dev_net
+
+networks:
+  dev_net:
+    external: true
