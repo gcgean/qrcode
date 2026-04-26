@@ -1,5 +1,8 @@
 # QR Grátis
 
+## Contexto (leia antes de alterar)
+Leia e siga o [PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md) antes de alterar qualquer código deste projeto.
+
 Gerador de QR Code online 100% gratuito, com 15 tipos de QR Code, personalização completa (moldura, forma e logo) e monetização via Google AdSense.
 
 ## Stack
@@ -29,31 +32,29 @@ qrcode/
 
 ## Como rodar localmente
 
-### Opção 1: Abrir diretamente
-Abra `index.html` no navegador (clique duplo no arquivo). Funciona offline.
-
-### Opção 2: Servidor local (recomendado, necessário para AdSense)
+### Docker (produção e desenvolvimento)
 ```bash
-# Python 3
-python -m http.server 8000
-
-# Node (http-server)
-npx http-server -p 8000
+docker network create dev_net
+docker compose up -d --build
 ```
 
-Acesse `http://localhost:8000`.
+Acesse `http://localhost:8081`.
+
+Para acompanhar logs:
+```bash
+docker compose logs -f
+```
+
+Para parar:
+```bash
+docker compose down
+```
 
 ## Deploy
 
-### GitHub Pages (recomendado, grátis)
-1. Crie um repositório no GitHub (ex.: `qrgratis`).
-2. Faça push do conteúdo desta pasta.
-3. Vá em Settings → Pages → Source: `main / root`.
-4. Site disponível em `https://seuusuario.github.io/qrgratis/`.
-5. Opcional: configure um domínio próprio (`qrgratis.com.br`).
+O deploy roda via Docker Compose, com Nginx servindo os arquivos estáticos.
 
-### Netlify / Vercel
-Arraste a pasta no dashboard ou conecte o repositório. Sem build step, detecção automática como site estático.
+O acesso público é feito pelo Cloudflare Tunnel em `https://qrcode.gestorfacil.ia.br`, apontando para `http://localhost:8081`.
 
 ## AdSense
 
